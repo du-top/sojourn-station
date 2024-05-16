@@ -503,8 +503,7 @@
 				/obj/item/clothing/suit/armor/vest/iron_lock_security = 1,
 				/obj/item/clothing/suit/greatcoat/os = 4,
 				/obj/item/clothing/head/os_cap = 4,
-				/obj/item/clothing/head/helmet/space/os = 8,
-				/obj/item/clothing/suit/space/os = 8,
+				/obj/item/clothing/suit/space/void/os = 6,
 				/obj/item/clothing/suit/space/void/greyson = 1))
 
 /obj/random/cloth/assault/reaver
@@ -514,7 +513,7 @@
 	spawn_nothing_percentage = 97 //about a 1/3 chance on a normal round of obtaining this
 
 /obj/random/cloth/assault/reaver/item_to_spawn()
-	return pickweight(list(/obj/item/clothing/suit/space/void/assault/void_wolf))
+	return pickweight(list(/obj/item/clothing/suit/space/void/assault_wolf))
 
 /obj/random/cloth/bells
 	name = "random bell collar"

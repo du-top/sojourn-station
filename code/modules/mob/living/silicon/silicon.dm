@@ -1,6 +1,7 @@
 /mob/living/silicon
 	gender = NEUTER
 	voice_name = "synthesized voice"
+	has_unlimited_silicon_privilege = TRUE
 	var/syndicate = 0
 	var/const/MAIN_CHANNEL = "Main Frequency"
 	var/lawchannel = MAIN_CHANNEL // Default channel on which to state laws
@@ -49,13 +50,13 @@
 	add_language(LANGUAGE_JANA)
 	add_language(LANGUAGE_CYRILLIC)
 	add_language(LANGUAGE_LATIN)
-	add_language(LANGUAGE_OPIFEXEE)
 	add_language(LANGUAGE_KRIOSAN)
 	add_language(LANGUAGE_AKULA)
 	add_language(LANGUAGE_MARQUA)
-	add_language(LANGUAGE_PLANT)
 	add_language(LANGUAGE_SYNTHETIC)
 	add_language(LANGUAGE_MERP)
+	add_language(LANGUAGE_BLORP)
+	add_language(LANGUAGE_WEH)
 	init_id()
 	init_subsystems()
 

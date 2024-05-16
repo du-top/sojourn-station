@@ -126,9 +126,17 @@
 	name = "Underground Floor 2 South Maintenance"
 	icon_state = "erisgreen"
 
-/area/nadezhda/maintenance/surface_maints_1
+/area/nadezhda/maintenance/surfacenorth
 	name = "Surface North Maintenance"
 	icon_state = "erisyellow"
+
+/area/nadezhda/maintenance/surfaceeast
+	name = "Surface East Maintenance"
+	icon_state = "erisgreen"
+
+/area/nadezhda/maintenance/surfacesec
+	name = "Surface Security Maintenance"
+	icon_state = "erisblue"
 
 /area/nadezhda/maintenance/cavehideout
 	name = "Abandoned Cave Shed"
@@ -303,6 +311,7 @@
 /area/nadezhda/outside/scave
 	name = "Spider Cave"
 	icon_state = "erisgreen"
+	dynamic_lighting = TRUE
 
 /area/nadezhda/outside/forest
 	name = "Forest"
@@ -358,11 +367,13 @@
 /area/nadezhda/outside/forest/hunting_lodge
 	name = "Hunting Lodge"
 	icon_state = "forest"
+	is_maintenance = FALSE
 	is_dungeon_lootable = FALSE
 
 /area/nadezhda/outside/forest/hunting_lodge_dark
 	name = "Hunting Lodge"
 	icon_state = "erisblue"
+	is_maintenance = FALSE
 	dynamic_lighting = TRUE
 	is_dungeon_lootable = FALSE
 
@@ -390,13 +401,36 @@
 	sound_env = MOUNTAINS
 	forced_ambience = list('sound/ambience/meadowamb1.ogg', 'sound/ambience/meadowamb2.ogg', 'sound/ambience/meadowamb3.ogg', 'sound/ambience/meadowamb4.ogg')
 
+/area/nadezhda/outside/inside_colony/east
+	name = "Colony Meadow - East"
 
+/area/nadezhda/outside/inside_colony/west
+	name = "Colony Meadow - West"
 /area/nadezhda/outside/mountainsolars
 	name = "Mountain Solars"
 	icon_state = "meadow"
 	sound_env = MOUNTAINS
 	forced_ambience = list('sound/ambience/meadowamb1.ogg', 'sound/ambience/meadowamb2.ogg', 'sound/ambience/meadowamb3.ogg', 'sound/ambience/meadowamb4.ogg')
 	is_dungeon_lootable = FALSE
+
+/area/nadezhda/outside/kepler //Off-world location
+	name = "barren planet"
+	icon_state = "erisblue"
+	area_light_color = COLOR_LIGHTING_BLUE_DARK
+	forced_ambience = list('sound/ambience/windamb1.ogg')
+	dynamic_lighting = TRUE
+	sound_env = PSYCHOTIC
+	is_dungeon_lootable = TRUE
+	ship_area = FALSE
+
+/area/nadezhda/outside/kepler/red //Off-world location, meant for areas near and inside huts
+	name = "barren planet - indoors"
+	area_light_color = COLOR_LIGHTING_RED_DARK
+	forced_ambience = list('sound/ambience/windamb2.ogg')
+	dynamic_lighting = TRUE
+	sound_env = PSYCHOTIC
+	is_dungeon_lootable = TRUE
+	ship_area = FALSE
 
 // SUBSTATIONS (Subtype of maint, that should let them serve as shielded area during radstorm)
 
@@ -532,6 +566,10 @@
 
 /area/nadezhda/command/bridge
 	name = "\improper Control Room"
+	icon_state = "bridge"
+
+/area/nadezhda/command/hallway
+	name = "\improper Command Hallway"
 	icon_state = "bridge"
 
 /area/nadezhda/command/meeting_room
@@ -734,13 +772,13 @@
 	sound_env = SMALL_SOFTFLOOR
 
 /area/nadezhda/crew_quarters/sleep/cryo
-	name = "\improper Upper Cryogenic Storage"
+	name = "\improper Colony Cryosleep Storage"
 	icon_state = "Sleep"
 	area_light_color = COLOR_LIGHTING_SCI_BRIGHT
 	flags = AREA_FLAG_CRITICAL | AREA_FLAG_RAD_SHIELDED
 
 /area/nadezhda/crew_quarters/sleep/cryo2
-	name = "\improper Lower Cryogenic Storage"
+	name = "\improper Lower Colony Elevator Lobby"
 	icon_state = "Sleep"
 	area_light_color = COLOR_LIGHTING_SCI_BRIGHT
 	flags = AREA_FLAG_CRITICAL | AREA_FLAG_RAD_SHIELDED
@@ -869,8 +907,8 @@
 	ambience = list('sound/ambience/ambicha1.ogg','sound/ambience/ambicha2.ogg','sound/ambience/ambicha3.ogg','sound/ambience/ambicha4.ogg')
 	sound_env = LARGE_ENCLOSED
 
-/area/nadezhda/absolutism/storage
-	name = "\improper Church Storage"
+/area/nadezhda/absolutism/hallways
+	name = "\improper Church Hallways"
 	icon_state = "erisyellow"
 	area_light_color = COLOR_LIGHTING_NEOTHEOLOGY_BRIGHT
 
@@ -885,7 +923,7 @@
 	area_light_color = COLOR_LIGHTING_NEOTHEOLOGY_BRIGHT
 
 /area/nadezhda/absolutism/vectorrooms
-	name = "\improper Church Vector Commons"
+	name = "\improper Church Commons"
 	icon_state = "erisblue"
 	area_light_color = COLOR_LIGHTING_NEOTHEOLOGY_BRIGHT
 
@@ -1209,7 +1247,7 @@ area/nadezhda/medical/medbaymeeting
 	icon_state = "surgery"
 
 /area/nadezhda/medical/cryo
-	name = "\improper Cryogenics"
+	name = "\improper Soteria Cryogenics Bay"
 	icon_state = "cryo"
 
 /area/nadezhda/medical/exam_room
@@ -1338,6 +1376,12 @@ area/nadezhda/medical/medbaymeeting
 	dynamic_lighting = FALSE
 	forced_ambience = list('sound/ambience/meadowamb1.ogg', 'sound/ambience/meadowamb2.ogg', 'sound/ambience/meadowamb3.ogg', 'sound/ambience/meadowamb4.ogg')
 
+/area/nadezhda/security/maingate/east
+	name = "\improper Security - Eastern Perimeter"
+
+/area/nadezhda/security/maingate/west
+	name = "\improper Security - Western Perimeter"
+
 /area/nadezhda/security/checkpoint/supply
 	name = "Security Post - Cargo Bay"
 	icon_state = "checkpoint1"
@@ -1368,6 +1412,10 @@ area/nadezhda/medical/medbaymeeting
 
 /area/nadezhda/security/vacantoffice2
 	name = "\improper Vacant Office"
+	icon_state = "security"
+
+/area/nadezhda/security/secrecroom
+	name = "Security - Recreation Room"
 	icon_state = "security"
 
 /area/nadezhda/security/inspectors_office

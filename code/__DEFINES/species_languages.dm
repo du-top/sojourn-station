@@ -43,6 +43,8 @@
 #define LANGUAGE_PLANT "Native Plant"
 #define LANGUAGE_SYNTHETIC "Technical Cant"
 #define LANGUAGE_MERP "Narad Pidgin"
+#define LANGUAGE_BLORP "Aulvae Sonet"
+#define LANGUAGE_WEH "Cindarite Voc"
 
 // Special / Antag langauges.
 #define LANGUAGE_MONKEY "Chimpanzee"

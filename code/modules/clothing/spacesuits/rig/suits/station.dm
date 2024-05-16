@@ -170,7 +170,7 @@ Advanced Voidsuit: Guild Master
 	siemens_coefficient = 0
 
 /obj/item/clothing/shoes/magboots/rig/ce
-	name = "advanced magboots"
+	name = "magboots"
 	desc = "Advanced magnetic boots that have a lighter magnetic pull, placing less burden on the wearer."
 	mag_slow = 0
 
@@ -321,17 +321,13 @@ Technomancer RIG
 	req_access = list()
 
 /obj/item/clothing/suit/space/rig/advhazmat
-	name = "Advanced AMI suit"
 
 /obj/item/clothing/gloves/rig/advhazmat
-	name = "Advanced AMI gloves"
 	siemens_coefficient = 0
 
 /obj/item/clothing/shoes/magboots/rig/advhazmat
-	name = "Advanced AMI shoes"
 
 /obj/item/clothing/head/helmet/space/rig/advhazmat
-	name = "Advanced AMI void helm"
 	camera_networks = list(NETWORK_RESEARCH)
 
 /***************************************
@@ -382,9 +378,9 @@ Technomancer RIG
 	icon_state = "response_team"
 	armor_list = list(
 		melee = 60,
-		bullet = 35,
-		energy = 25,
-		bomb = 50,
+		bullet = 15,
+		energy = 10,
+		bomb = 30,
 		bio = 100,
 		rad = 100
 	)
@@ -406,7 +402,6 @@ Technomancer RIG
 	req_one_access = list()
 
 	initial_modules = list(
-		/obj/item/rig_module/modular_injector/combat,
 		/obj/item/rig_module/modular_injector/medical,
 		/obj/item/rig_module/maneuvering_jets,
 		/obj/item/rig_module/device/healthscanner,
@@ -418,6 +413,7 @@ Technomancer RIG
 	name = "SI 'Medtek' control module"
 	desc = "An upgraded and somewhat customized soteria 'retainer' RIGsuit. Though superficially and aesthetically similar this suit has undergone a series of upgrades so as to improve its utility \
 	for Soterias resident overworked Chief of Medicine. Improved servos are paired with neural-mnemonic sensors allowing the user unmatched speed and dexterity- one can easily forget that they are even wearing the suit."
+	suit_type = "SI 'Medtek"
 	armor_list = list(
 		melee = 0,
 		bullet = 0,
@@ -478,7 +474,7 @@ Technomancer RIG
 	name = "stewards hardsuit control module"
 	desc = "A modification of the traditional combat rig built for equal parts utility and defense. Marked with a seal of two Armstrong rifles crossing each other in a X at the base of the neck."
 	icon_state = "security_rig"
-	suit_type = "combat hardsuit"
+	suit_type = "stewards hardsuit"
 	armor_list = list(
 		melee = 40,
 		bullet = 40,

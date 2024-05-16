@@ -6,7 +6,7 @@
 	damage_types = list(BURN = 28)
 	armor_penetration = 15
 	check_armour = ARMOR_ENERGY
-	fire_stacks = 2 //Blasma
+	fire_stacks = 1 //Blasma
 
 	affective_damage_range = 3
 	affective_ap_range = 5
@@ -33,7 +33,7 @@
 	affective_damage_range = 2
 	affective_ap_range = 3
 	recoil = 10
-	fire_stacks = 3
+	fire_stacks = 1
 
 	damage_types = list(BURN = 30)
 	armor_penetration = 30
@@ -48,7 +48,7 @@
 	affective_damage_range = 1
 	affective_ap_range = 2
 	recoil = 30
-	fire_stacks = 4
+	fire_stacks = 1
 
 /obj/item/projectile/plasma/impact
 	name = "plasma impact bolt"
@@ -77,6 +77,7 @@
 	check_armour = ARMOR_ENERGY
 	recoil = 1
 	fire_stacks = 0
+	ignition_source = FALSE
 
 /obj/item/projectile/plasma/lastertag/blue/on_hit(atom/target)
 	if (!testing)
@@ -98,6 +99,7 @@
 	check_armour = ARMOR_ENERGY
 	recoil = 1
 	fire_stacks = 0
+	ignition_source = FALSE
 
 /obj/item/projectile/plasma/lastertag/red/on_hit(atom/target)
 	if (!testing)
@@ -119,6 +121,7 @@
 	check_armour = ARMOR_ENERGY
 	recoil = 1
 	fire_stacks = 0
+	ignition_source = FALSE
 
 /obj/item/projectile/plasma/lastertag/green/on_hit(atom/target)
 	if (!testing)
@@ -140,6 +143,7 @@
 	check_armour = ARMOR_ENERGY
 	recoil = 1
 	fire_stacks = 0
+	ignition_source = FALSE
 
 /obj/item/projectile/plasma/lastertag/yellow/on_hit(atom/target)
 	if (!testing)
@@ -160,6 +164,7 @@
 	check_armour = ARMOR_ENERGY
 	recoil = 1
 	fire_stacks = 0
+	ignition_source = FALSE
 
 	muzzle_type = /obj/effect/projectile/laser_omni/muzzle
 	tracer_type = /obj/effect/projectile/laser_omni/tracer
