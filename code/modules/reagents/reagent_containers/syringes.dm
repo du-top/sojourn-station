@@ -97,7 +97,7 @@
 					if(isslime(target))
 						to_chat(user, SPAN_WARNING("You are unable to locate any blood."))
 						return
-					var/amount = reagents.get_free_space()
+					var/amount = amount_per_transfer_from_this < reagents.get_free_space() ? amount_per_transfer_from_this : reagents.get_free_space()
 					var/mob/living/carbon/T = target
 					if(!T.dna)
 						to_chat(user, SPAN_WARNING("You are unable to locate any blood. (To be specific, your target seems to be missing their DNA datum)."))
